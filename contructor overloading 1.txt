@@ -1,0 +1,47 @@
+import java.util.*;
+class std
+ {
+     int rn;
+     String name;
+     void read()
+     {
+         System.out.println("enter roll number");
+         Scanner sc=new Scanner(System.in);
+         rn=sc.nextInt();
+         System.out.println("enter name");
+         name=sc.nextLine();
+     }
+     
+     void display()
+     {
+         System.out.println("name is");
+         System.out.println(name);
+         System.out.println("roll no "+rn);
+        
+         
+     }
+     std()
+     {
+         rn=0;
+         name="xyz";
+     }
+     std(int a,String x)
+     {
+         rn=10;
+         name="code";
+         
+     }
+ }
+class Main
+{
+	public static void main(String[] args) {
+	
+		std s1=new std();
+		s1.display();
+		std s2=new std(44,"aman");
+		s2.display();
+		s1.read();
+		s1.display();
+		
+	}
+}

@@ -1,0 +1,76 @@
+import java.util.*;
+class std 
+{
+    int rn,total;
+    String name=new String();
+    int marks[]=new int[5];
+    void read()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the name");
+        name=sc.nextLine();
+        System.out.println("enter the roll number:");
+        rn=sc.nextInt();
+       
+        total=0;
+        for(int i=0;i<5;i++)
+        {
+            System.out.println("enter marks of the subjects"+i);
+            marks[i]=sc.nextInt();
+            total=total+marks[i];
+        }
+        
+    }
+} 
+interface sports 
+{
+    final int sm=10;
+   public void displaysm();
+}
+
+class result extends std implements sports
+{
+   public void displaysm()
+    {
+        System.out.println("sports marks="+sm);
+    }
+        int newTotal;
+        float percentage;
+        public void displayms()
+        {
+                newTotal=total+sm;
+                percentage=newTotal/5;
+                System.out.println("the percentage of the student is="+percentage);
+        }
+    
+}
+
+class Main
+{
+    public static void main(String[]args)
+    {
+        result r1=new result();
+        r1.read();
+        r1.displayms();
+        r1.displaysm();
+        
+    }
+}
+
+Output:
+enter the name
+amit
+enter the roll number:
+55
+enter marks of the subjects0
+69
+enter marks of the subjects1
+69
+enter marks of the subjects2
+69
+enter marks of the subjects3
+69
+enter marks of the subjects4
+69
+the percentage of the student is=71.0
+sports marks=10
